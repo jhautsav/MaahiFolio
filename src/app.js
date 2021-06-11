@@ -22,6 +22,9 @@ hbs.registerPartials(paritalPath);
 app.get('/',(req,res)=>{
     res.render('index');
 })
+app.get('*',(req,res)=>{
+    res.render('404');
+})
 app.post('/email', async (req, res) => {
     try {
         const usrname = req.body.name;
@@ -57,13 +60,13 @@ app.post('/email', async (req, res) => {
             }
             else {
                 
-                   res.render('index');
+                   res.render('index' );
 
                
 
             }
         })
-        console.log(sendMail);
+     
          
     }
     catch (e) {

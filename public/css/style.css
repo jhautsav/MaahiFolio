@@ -6,6 +6,14 @@ body {
     background: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
+#more
+{
+    display: none;
+}
+#more1
+{
+    display: none;
+}
 
 h1,
 h2, 
