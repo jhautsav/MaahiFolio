@@ -31,10 +31,7 @@ app.post('/email', async (req, res) => {
         const email = req.body.email;
         const subject = req.body.subject;
         const text = req.body.text;
-    console.log(usrname);
-    console.log(email);
-    console.log(subject);
-    console.log(text);
+        const number=req.body.number;
 
 
         const transporter = nodemailer.createTransport({
@@ -50,7 +47,7 @@ app.post('/email', async (req, res) => {
             subject: subject,
 
             html: `<p>hiii i am ${usrname}</p>
-          <p>contact : ${email}</p>
+          <p>contact : ${email} and ${number}</p>
           <p>messege:${text}</p>`
         };
 
